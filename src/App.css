@@ -1,0 +1,207 @@
+#clock{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & #clock_time{
+    font-family: var(--sans);
+    margin: 28vh 0 0 50%;
+    transform: translateX(-50%);
+
+    border: var(--bg) solid 1px;
+    font-size: 10em;
+    text-align: center;
+    color:lightgray;
+
+    height: 7rem;
+    width: 75vw;
+
+    @media(max-width: 80rem) {
+      border-radius: 8vw;
+      font-size: clamp(3em, 15vw, 10em);
+    }
+
+
+
+    & .clock-style00{
+      transition: all 0.3s ease-out;
+    }
+
+    & .clock-style01{
+      background-color:lightgray;
+      color: #16171d;
+      padding-bottom: 1rem;
+      border-radius: 10vh;
+      transition: all 0.3s ease-out;
+
+      @media(max-width: 58rem) {
+        height: clamp(1rem, 10vw, 7rem);
+        padding-bottom: clamp(1rem, 10vw, 7rem) ;
+      }
+    }
+
+    & .clock-style02{
+      padding-bottom: 1rem;
+      border: #e5e4e7 solid 1px;
+      border-radius: 10vh;
+      transition: all 0.3s ease-out;
+
+      @media(max-width: 58rem) {
+        height: clamp(1rem, 10vw, 7rem);
+        padding-bottom: clamp(1rem, 13vw, 6rem);
+      }
+    }
+
+    & .clock-style03{
+      background-color:lightgray;
+      color: #16171d;
+      font-family: var(--mono);
+      padding: 1rem 0 1rem 0;
+      border-radius: 10vh;
+      transition: all 0.3s ease-out;
+
+      @media(max-width: 58rem) {
+        height: clamp(1rem, 10vw, 6rem);
+        padding-bottom: clamp(1rem, 10vw, 6rem);
+        padding-top: clamp(0.5rem, 4vw, 1rem);
+        font-size: clamp(0.5em, 14vw, 10em);
+      }
+    }
+
+    & .clock-style04{
+      font-family: var(--mono);
+      border: #e5e4e7 solid 1px;
+      padding: 1rem 0 1rem 0;
+      border-radius: 10vh;
+      transition: all 0.3s ease-out;
+
+      @media(max-width: 58rem) {
+        height: clamp(1rem, 10vw, 6rem);
+        padding-bottom: clamp(1rem, 10vw, 6rem);
+        padding-top: clamp(0.5rem, 4vw, 1rem);
+        font-size: clamp(0.5em, 14vw, 10em);
+      }
+    }
+
+    & .clock-style05{
+      font-family: var(--mono);
+      transition: all 0.3s ease-out;
+    }
+  }
+
+
+
+  & #clock_alarm{
+    font-family: var(--sans);
+    text-align: center;
+    font-size: clamp(1em, 4vw, 1.5em);
+    margin-top: 10vw;
+
+    & input{
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    & span{
+      text-decoration: underline;
+    }
+  }
+
+
+
+  & #stopwatch_buttons{
+    margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+
+    & button{
+      border: none;
+      border-radius: 15%;
+      padding: 1rem;
+      font-weight: bold;
+
+      margin: 0 0.5rem 0 0.5rem;
+
+      transition: all 0.3s ease-out;
+    }
+
+    & button:hover{
+      background-color: var(--blue);
+
+      padding: 1.25rem;
+      margin: 0 0.85rem 0 0.85rem;
+    }
+  }
+
+
+  & #stopwatch_laps{
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    & ul{
+      list-style: none;
+    }
+    & li{
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+      background: #2e303a;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+
+      transition: all 0.3s ease-out;
+    }
+    & li:hover{
+      background: #e5e4e7;
+      color: #1f2028;
+    }
+  }
+}
+
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px solid var(--border);
+
+  & button{
+    border: none;
+    background: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 0.5rem;
+    padding: 0 0.25rem 0 0.25rem;
+    transition: all 0.3s ease-out;
+  }
+  & button::before{
+    content: '';
+    position: absolute;
+    background: #e5e4e7;
+    height: 0.2rem;
+    width: 0;
+    border-radius: 1rem;
+    transform: translateX(-25%);
+    margin-top: 1.7188rem;
+    transition: all 0.3s ease-out;
+  }
+  & button:hover::before {
+    content: "";
+    position: absolute;
+    background: var(--blue);
+    height: 0.2rem;
+    width: 10rem;
+  }
+  & button:hover{
+    font-weight: bold;
+  }
+
+  & a{
+    text-decoration: none;
+    color: var(--text);
+  }
+}
+
